@@ -1,0 +1,13 @@
+#Database Configuration
+spring.datasource.url=jbdc:mariadb://mariadb.vamk.fi:3306/e2001875_spring?useSSL=false&serverTimezone=Europe/Helsinki
+spring.datasource.username=root
+spring.datasource.password=9K28hahWuaE
+spring.datasource.driver-class-name=org.mariadb.jdbc.Driver
+
+#hibernate
+spring.jpa.database-platform=org.hibernate.dialect.MariaDB103Dialect
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+
+
+

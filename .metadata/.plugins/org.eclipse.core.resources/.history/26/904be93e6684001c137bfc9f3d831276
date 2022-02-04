@@ -1,0 +1,8 @@
+package fi.vamk.e2001875.app.service;
+
+import fi.vamk.e2001875.app.entity.User;
+
+public interface UserService {
+
+	public Iterable<User> findAll();
+}
