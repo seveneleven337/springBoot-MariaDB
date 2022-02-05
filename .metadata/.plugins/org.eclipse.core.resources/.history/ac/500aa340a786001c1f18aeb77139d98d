@@ -1,0 +1,8 @@
+package fi.vamk.e2001875.app.service;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProfileService extends JpaRepository<Profile profile>{
+
+}

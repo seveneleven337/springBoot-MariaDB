@@ -5,10 +5,13 @@ import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -32,9 +35,11 @@ public class User implements Serializable {
 	@Column(nullable=false, unique = true, length = 50)
 	private String phone;
 	
+		
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "profile", referencedColumnName = "id")
+	@JoinColumn(name = "profile_id")
 	private Profile profile;
+
 
 	public Long getId() {
 		return id;
@@ -67,6 +72,7 @@ public class User implements Serializable {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
+	
+	
 
 }
