@@ -1,0 +1,21 @@
+package fi.vamk.e2001875.app.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import fi.vamk.e2001875.app.DTO.RelationRequest;
+import fi.vamk.e2001875.app.entity.Profile;
+import fi.vamk.e2001875.app.repository.ProfileRepository;
+import fi.vamk.e2001875.app.repository.UserRepository;
+
+public class RelationController {
+
+	@Autowired
+	private ProfileRepository profileRepository;
+	@Autowired
+	private UserRepository userReposiroty;
+	
+	public Profile placeRequest(@RequestBody RelationRequest request) {
+		return profileRepository.save(request.getProfile());
+	}
+}
